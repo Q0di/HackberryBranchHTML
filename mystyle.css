@@ -1,0 +1,89 @@
+<!--Google Fonts: This is why all my letters look like marker-->
+
+
+/*this part makes the background shift through colors giving it a "pulsing" effect*/
+    body {
+      /*webkit makes the animation compatible with chrome
+        "pulse" is the name of the animation defined below
+        10s is how long the animation will take to move through the colors 
+        infinite means this animation is on an endless loop
+      */
+        -webkit-animation: pulse 10s infinite;
+        
+      /* this is the W3 standard going forward.  same stuff just minus the webkit portion*/    
+        animation: pulse 10s infinite;}
+    
+    /*more compatiblity stuff
+      keyframes define the animation behavior.
+      In THIS keyframe we cycle through colors.
+      Use the same color that you started with as your ending color to avoid an         unappealing "flash" at the end of the animation.
+      Tutorial I learned this from: 
+      CSS Background Pulse Animation - Twisted Core Tutorial
+      https://www.youtube.com/watch?v=M2iVAKmCUJk
+    */
+    @-webkit-keyframes pulse {
+        0% {background:#c9bed2}
+        25% {background:#706a85}
+        50% {background:#b6a3c9}
+        75% {background:#9e86b0}
+        100% {background:#c9bed2}
+    }
+    /*same as above but the W3 standard
+    Tut I learned this from: 
+    CSS Background Pulse Animation - Twisted Core Tutorial
+    https://www.youtube.com/watch?v=M2iVAKmCUJk
+    */
+    @keyframes pulse {
+        0% {background:#c9bed2}
+        25% {background:#706a85}
+        50% {background:#b6a3c9}
+        75% {background:#9e86b0}
+        100% {background:#c9bed2}
+    }
+    
+    .header{
+        margin:40px 0px 20px 0px;
+        text-align:center;
+        font-family: 'Permanent Marker', cursive;
+    }
+    /*box 1*/
+    .entry{
+        height: 520px;
+        width: 520px;
+        float: left;
+        text-align: center;
+        padding: 50px;
+        margin: 0px;
+        font-family: 'Permanent Marker', cursive;
+       
+    }
+    /*box 2*/
+    figure {
+        height: 520px;
+        width: 520px;
+        margin: 30px;
+        padding: 10px 10px 50px 10px;
+        background-color:#DFCAAE;
+        border: 1px solid;
+        
+    }
+    /*what happens when you mouse over box 2*/
+    figure:hover{
+       height: 520px;
+       width: 520px;    
+       padding: 50px 50px 50px 50px;
+       background: url("https://45.media.tumblr.com/09b8d9a0942bdca07f4116e29e8423f0/tumblr_njueyhMQM51txeruoo2_r3_500.gif");
+       background-size: cover;
+       color:#fff;    
+       z-index:999;
+        
+    }
+    /*box 3- the picture itself*/
+    figure img{
+        height: 510px;
+        width: 510px;
+        padding: 0;
+        border: 1px solid;
+        
+    }
+    
